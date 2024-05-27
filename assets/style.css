@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.jop-page {
+  font-family: "Ubuntu", sans-serif;
+  padding: 20px;
+  --main-color: #022537;
+  --red-color: #c2203d;
+  --gray-color: gray;
+  --gray-light: #0225378a;
+  --radius-value: 12px;
+  color: var(--main-color);
+  font-size: 14px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  p {
+    margin: 5px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+.wrap {
+  max-width: 1440px;
+}
+
+.wrap h1,
+.wrap h2,
+.wrap h3,
+.wrap h4,
+.wrap h5 {
+  color: var(--main-color);
+  font-family: "Ubuntu", Courier, monospace;
+  font-weight: bold;
+  line-height: 33.6px;
+}
+.wrap h2 {
+  font-size: 24px;
+}
+.search input,
+select {
+  padding-inline: 26px;
+}
+.search {
+  position: relative;
+}
+.search i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.filter-wrap {
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+}
+.department {
+  position: relative;
+}
+.filter-wrap i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.department-filter,
+input,
+.department-filter:focus,
+.department-filter:active {
+  outline: none;
+  width: 240px;
+  height: 46px;
+  padding: 14px 24px 14px 24px;
+  gap: 0px;
+  border-radius: var(--radius-value);
+  border: none;
+  box-shadow: 0px 2px 5px 0px #00000029;
+  color: var(--main-color);
+}
+
+/* inputs */
+
+#job-application-form input{
+  padding-inline-start: 10px !important;  
+}
+
+input[type="search"] {
+  width: 330px;
+  height: 46px;
+  color: gray;
+  background-image: url("http://i47.tinypic.com/r02vbq.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+input[type="search"]:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input#cv {
+  padding-top: 8px;
+}
+
+
+/* UI element */
+.divider {
+  margin-top: 12px;
+  width: 100%;
+  height: 1px;
+  background: var(--gray-color);
+  opacity: 24%;
+}
+
+.job-content-wrap {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  gap: 20px;
+}
+
+.jobs-list {
+  border-radius: var(--radius-value);
+  padding: 20px;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.sub-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-light);
+  margin-bottom: 10px;
+  line-height: 19.6px;
+}
+
+/* =========== item of list ========== */
+.wrap article {
+  padding: 12px 20px;
+  margin-top: 18px;
+  box-shadow: 0px 2px 5px 0px #00000029;
+  border-radius: var(--radius-value);
+  overflow: hidden;
+  transition: all 300ms;
+  cursor: pointer;
+}
+.wrap article header > h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.wrap article header > i {
+  color: var(--main-color);
+}
+
+.jop-item-active,
+.wrap article:hover,
+.wrap article:active {
+  background-color: var(--red-color);
+  transform: scale(1.01, 1.01);
+}
+.jop-item-active header > p,
+.wrap article:hover > p,
+.wrap article:hover header > p {
+  color: rgba(255, 255, 255, 0.54);
+}
+.jop-item-active p,
+.wrap article:hover p,
+.jop-item-active i {
+  color: rgba(255, 255, 255);
+}
+.jop-item-active h3,
+.wrap article:hover h3 {
+  color: white;
+}
+.jop-item-active > .divider,
+.wrap article:hover > .divider {
+  background-color: rgba(255, 255, 255, 0.534);
+}
+.job-list-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 12px;
+  font-weight: 400;
+}
+.jop-list-meta {
+  display: flex;
+  gap: 20px;
+  color: var(--gray-light);
+}
+
+.office-name {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  color: var(--gray-light);
+}
+
+/* job content box */
+.job-content {
+  box-shadow: 0px 2px 5px 0px #00000029;
+  margin-top: 24px;
+  border-radius: var(--radius-value);
+  padding: 20px;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.header-content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apply-button {
+  appearance: none;
+  width: 234px;
+  height: 46px;
+  top: 224px;
+  left: 1170px;
+  padding: 14px 24px 14px 24px;
+  gap: 8px;
+  border-radius: var(--radius-value);
+  opacity: 0px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--red-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.09px;
+  color: white;
+}
+
+.apply-button:hover , input[type="submit"]:hover{
+  opacity: 90%;
+}
+
+.job-details {
+  padding-top: 24px;
+}
+
+.job-application-form {
+  display: none;
+}
+#job-application-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+
+
+}
+#job-application-form p{
+  display: flex;
+  flex-direction: column;
+  margin:10px;
+}
+#job-application-form input{
+  width: 400px;
+
+}
+#job-application-form label{
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom:10px;
+}
+textarea#cover_letter{
+  appearance: none;
+    height: 100px;
+    width: 400px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 5px 0px #00000029;
+    padding: 12px;
+}
+
+input[type="submit"]{
+  background-color: var(--red-color);
+  color: white;
+}
+
+#job-application-form h2{
+  padding-bottom: 12px;
+}
+
+.success{
+  padding: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid green;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: green;
+}
+.error{
+  padding: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid var(--red-color);
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--red-color);
+}
+
+input[type="file"]::file-selector-button {
+  background-color: var(--red-color);
+  outline:none;
+  border: none;
+  padding: 8px ;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
